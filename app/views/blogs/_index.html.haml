@@ -1,0 +1,15 @@
+
+%table.table-blogs
+  %thead
+    %tr
+      %th Title
+      %th &nbsp;
+      %th &nbsp;
+      %th &nbsp;
+  %tbody
+    - blog.index.each do |blog|
+      %tr
+        %td= blog.title
+        %td= link_to 'Show', blog
+        %td= link_to 'Edit', edit_blog_path(blog)
+        %td= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }

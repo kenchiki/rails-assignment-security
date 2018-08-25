@@ -1,0 +1,6 @@
+%h1 Listing blogs
+
+= render 'blogs/index', blog: @presenter.blog
+
+%ul.controls
+  %li= link_to 'New Blog', new_blog_path

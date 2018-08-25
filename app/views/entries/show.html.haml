@@ -1,0 +1,15 @@
+- if notice
+  %p#notice= notice
+
+%h1 Entry show
+
+= render 'entries/show', {blog: @presenter.blog,entry: @presenter.entry}
+
+%ul.controls
+  %li= link_to 'Edit', edit_blog_entry_path(@presenter.blog,@presenter.entry)
+  %li= link_to 'Back', @presenter.blog
+
+= render 'comments/index', {blog: @presenter.blog,entry: @presenter.entry}
+
+%h2 New Comment
+= render 'comments/form', {blog: @presenter.blog,entry: @presenter.entry,comment: @presenter.comment}

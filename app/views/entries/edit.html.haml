@@ -1,0 +1,7 @@
+%h1 Editing entry
+
+= render 'form', blog: @presenter.blog, entry: @presenter.entry
+
+%ul.controls
+  %li= link_to 'Show', [@presenter.blog,@presenter.entry]
+  %li= link_to 'Back', @presenter.blog

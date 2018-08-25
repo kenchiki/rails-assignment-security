@@ -1,0 +1,19 @@
+- if entry.comments_where_persisted_present?
+  %table
+    %thead
+      %tr
+        %th Body
+        %th &nbsp;
+        %th &nbsp;
+    %tbody
+      - entry.comments_where_persisted.each do |comment|
+        %tr
+          %td
+            - if comment.approved?
+              = comment.body
+            - else
+              unapproved
+          %td
+            - if  comment.unapproved?
+              = link_to 'Approve', blog_entry_comment_approve_path(blog, entry, comment), method: :put
+          %td= link_to 'Destroy', blog_entry_comment_path(blog, entry, comment), method: :delete, data: {confirm: 'are you sure?'}

@@ -1,0 +1,17 @@
+- if notice
+  %p#notice= notice
+
+= render 'blogs/show', {blog: @presenter.blog}
+
+%ul.controls
+  %li= link_to 'Edit', edit_blog_path(@presenter.blog)
+  %li= link_to 'Back', blogs_path
+
+%h2 Listing entries
+
+= render 'entries/index', {blog: @presenter.blog}
+
+
+
+%ul.controls
+  %li= link_to 'New Entry', new_blog_entry_path(@presenter.blog)

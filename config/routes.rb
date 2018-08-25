@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :blogs do
+    resources :entries, only: [:create, :destroy, :edit, :new, :show, :update] do
+      resources :comments, only: [:create, :destroy] do
+        put :approve
+      end
+    end
+  end
+  root 'blogs#index'
 end

@@ -1,0 +1,17 @@
+- if blog.entries_present?
+  %table.table-entries
+    %thead
+      %tr
+        %th Title
+        %th Body
+        %th &nbsp;
+        %th &nbsp;
+        %th &nbsp;
+    %tbody
+      - blog.entries.each do |entry|
+        %tr
+          %td= entry.title
+          %td= entry.body
+          %td= link_to 'Show', blog_entry_path(blog, entry)
+          %td= link_to 'Edit', edit_blog_entry_path(blog, entry)
+          %td= link_to 'Destroy', blog_entry_path(blog, entry), method: :delete, data: {confirm: 'are you sure?'}

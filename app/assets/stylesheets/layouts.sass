@@ -1,0 +1,109 @@
+*
+  margin: 0
+  padding: 0
+
+ul, ol
+  list-style: none
+
+p
+  margin-top: 10px
+
+html
+  font-size: 62.5%
+  background: #FFFFF7
+
+body
+  font-size: 1.6rem
+  color: #7D656D
+
+#wrapper
+  width: 800px
+  margin: 50px auto 0 auto
+  border: 10px solid #F2EFF0
+  box-sizing: border-box
+  padding: 40px
+  background: #ffffff
+  & > *:first-child
+    margin-top: 0 !important
+
+h1
+  font-size: 2.4rem
+
+h2
+  margin-top: 20px
+  font-size: 1.8rem
+
+a
+  color: #6B9558
+
+table
+  margin-top: 20px
+  width: 100%
+
+table, th, td
+  border-collapse: collapse
+  border-top: 1px solid #ccc
+  border-bottom: 1px solid #ccc
+
+th, td
+  padding: 10px
+  text-align: left
+
+#notice
+  background: #eeeeee
+  padding: 20px
+  margin-bottom: 20px
+
+.controls
+  margin-top: 20px
+  display: flex
+  & > *:nth-child(n+2)
+    &:before
+      content: "|"
+      margin-left: 10px
+      margin-right: 10px
+
+.table-blogs
+  th
+    &:nth-child(1)
+      width: 50%
+
+.table-entries
+  th
+    &:nth-child(-n+2)
+      width: 30%
+
+.field
+  margin-top: 20px
+  label
+    display: block
+    font-weight: bold
+  input[type=text], textarea
+    width: 100%
+    padding: 5px
+
+.actions
+  margin-top: 20px
+  input[type=submit]
+    padding: 10px 30px
+    border-radius: 5px
+
+#error_explanation
+  border: 2px solid red
+  padding: 7px 7px 0
+  margin-bottom: 20px
+  background-color: #f0f0f0
+  margin-top: 20px
+
+  h2
+    text-align: left
+    font-weight: bold
+    padding: 5px 5px 5px 15px
+    font-size: 12px
+    margin: -7px -7px 0
+    background-color: #c00
+    color: #fff
+
+  ul li
+    margin-left: 20px
+    list-style: square
