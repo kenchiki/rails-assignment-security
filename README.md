@@ -1,24 +1,14 @@
-# README
+# 応用的な画面やフォームを作成できるようになる
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Blog、Entry、Commentを登録できる画面を作りましょう。
 
-Things you may want to cover:
+基本的な構成はScaffoldの画面に似ていますが、全く同じではないのでControllerやViewには独自のコードを書く必要があります。
 
-* Ruby version
+## ゴール
 
-* System dependencies
+- Blog、EntryのCRUDが画面から実行できるようにする。
+- Commentの登録と削除が画面からできるようにする。
+- Commentの承認が画面からできるようにする。
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Ruby version
+2.5.1
