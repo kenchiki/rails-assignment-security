@@ -15,26 +15,27 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
   database: rails_assignment_crud_nest_development
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  username: <%= ENV['MYSQL_DATABASE_USERNAME'] %>
+  password: <%= ENV['MYSQL_DATABASE_PASSWORD'] %>
 
 test:
   <<: *default
   database: rails_assignment_crud_nest_test
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  username: <%= ENV['MYSQL_DATABASE_USERNAME'] %>
+  password: <%= ENV['MYSQL_DATABASE_PASSWORD'] %>
 
 production:
   <<: *default
   database: rails_assignment_crud_nest_production
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  username: <%= ENV['MYSQL_DATABASE_USERNAME'] %>
+  password: <%= ENV['MYSQL_DATABASE_PASSWORD'] %>

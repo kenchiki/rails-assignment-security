@@ -17,7 +17,7 @@ class BlogsPresenter
   end
 
   def find_path_blog
-    return Blog.find(@params[:id]) if @params[:id]
+    return Blog.where("id = #{@params[:id]}").first if @params[:id]
     Blog.new
   end
 end

@@ -9,7 +9,7 @@
   %tbody
     - blog.index.each do |blog|
       %tr
-        %td= blog.title
+        %td= blog.title.html_safe
         %td= link_to 'Show', blog
         %td= link_to 'Edit', edit_blog_path(blog)
         %td= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }
